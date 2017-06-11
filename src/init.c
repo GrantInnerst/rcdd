@@ -28,7 +28,7 @@ static R_CMethodDef cMethods[] = {
     {NULL, NULL, 0, NULL}
 };
 
-static R_CallMethodDef callMethods[]  = {
+static const R_CallMethodDef callMethods[]  = {
     {"d2q", (DL_FUNC) &d2q, 1},
     {"q2d", (DL_FUNC) &q2d, 1},
     {"q2q", (DL_FUNC) &q2q, 1},
@@ -55,7 +55,7 @@ static R_CallMethodDef callMethods[]  = {
     {NULL, NULL, 0}
 };
 
-void attribute_visible R_init_rcdd(DllInfo *info)
+void R_init_rcdd(DllInfo *info)
 {
     R_registerRoutines(info, cMethods, callMethods, NULL, NULL);
     R_useDynamicSymbols(info, FALSE);
