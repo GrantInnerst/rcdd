@@ -60,5 +60,6 @@ void attribute_visible R_init_rcdd(DllInfo *info)
     R_registerRoutines(info, cMethods, callMethods, NULL, NULL);
     R_useDynamicSymbols(info, FALSE);
     R_forceSymbols(info, TRUE);
+    R_RegisterCCallable("rcdd", "lpcdd", (DL_FUNC) &lpcdd);
 }
 
