@@ -1,5 +1,6 @@
 #ifndef RCDD_API_H
 #define RCDD_API_H
+#endif
 
 #include <rcdd.h>
 #include <R.h>
