@@ -61,5 +61,6 @@ void R_init_rcdd(DllInfo *info)
     R_useDynamicSymbols(info, FALSE);
     R_forceSymbols(info, TRUE);
     R_RegisterCCallable("rcdd", "lpcdd", (DL_FUNC) &lpcdd);
+    R_RegisterCCallable("rcdd", "lpcdd_f", (DL_FUNC) &lpcdd_f);
 }
 
